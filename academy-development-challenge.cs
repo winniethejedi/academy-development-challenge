@@ -26,14 +26,21 @@ public class Program
     public string ArrayMatching(string[] strArr) {
         if (strArr == null) throw new ArgumentException("strArr must not be null.");
         if (strArr.Length < 2 || strArr.Length > 2) throw new ArgumentException("strArr must have two elements.");
+        if (strArr[0] == null || strArr[1] == null) throw new ArgumentException("Strings must not be null.")
 
+        int[] intArr1 = CreateIntArray(strArr[0]);
+        int[] intArr2 = CreateIntArray(strArr[1]);
 
 
         string result = "";
         return result;
     }
 
-    public bool CheckFormat(string[] strArr) {
+    public int[] CreateIntArray(string str) {
         
+    }
+
+    public bool CheckFormat(string str) {
+        bool containsFirstBracket = str.Contains('[')
     }
 }
