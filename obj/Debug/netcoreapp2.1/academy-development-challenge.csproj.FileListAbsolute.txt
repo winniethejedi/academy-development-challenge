@@ -1,0 +1,11 @@
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\bin\Debug\netcoreapp2.1\academy-development-challenge.deps.json
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\bin\Debug\netcoreapp2.1\academy-development-challenge.runtimeconfig.json
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\bin\Debug\netcoreapp2.1\academy-development-challenge.runtimeconfig.dev.json
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\bin\Debug\netcoreapp2.1\academy-development-challenge.dll
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\bin\Debug\netcoreapp2.1\academy-development-challenge.pdb
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\obj\Debug\netcoreapp2.1\academy-development-challenge.csprojAssemblyReference.cache
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\obj\Debug\netcoreapp2.1\academy-development-challenge.csproj.CoreCompileInputs.cache
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\obj\Debug\netcoreapp2.1\academy-development-challenge.AssemblyInfoInputs.cache
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\obj\Debug\netcoreapp2.1\academy-development-challenge.AssemblyInfo.cs
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\obj\Debug\netcoreapp2.1\academy-development-challenge.dll
+E:\Users\Owner\Desktop\programs\academy-development-challenge\academy-development-challenge\obj\Debug\netcoreapp2.1\academy-development-challenge.pdb
