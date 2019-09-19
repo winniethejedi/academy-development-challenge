@@ -28,15 +28,25 @@ namespace academy_development_challenge
                 //Tests
                 var program = new Program();
                 Console.WriteLine(program.TryArrayMatching(nullTest));
+                Console.WriteLine("Should be \"strArr must not be null.\"");
                 Console.WriteLine(program.TryArrayMatching(oneStringTest));
+                Console.WriteLine("Should be \"strArr must have two elements.\"");
                 Console.WriteLine(program.TryArrayMatching(threeStringTest));
+                Console.WriteLine("Should be \"strArr must have two elements.\"");
                 Console.WriteLine(program.TryArrayMatching(nullStringsTest));
+                Console.WriteLine("Should be \"Strings in strArr must not be null.\"");
                 Console.WriteLine(program.TryArrayMatching(noNumbersTest));
+                Console.WriteLine("Should be \"strArr must have at least one string with a number.\"");
                 Console.WriteLine(program.TryArrayMatching(mixedNumbersLettersTest));
+                Console.WriteLine("Should be \"6-3\"");
                 Console.WriteLine(program.TryArrayMatching(oneEmptyStringTest));
+                Console.WriteLine("Should be \"1-2-3\"");
                 Console.WriteLine(program.TryArrayMatching(sampleTest1));
+                Console.WriteLine("Should be \"6-4-13-17\"");
                 Console.WriteLine(program.TryArrayMatching(sampleTest2));
+                Console.WriteLine("Should be \"7-4-6-10-6\"");
                 Console.WriteLine(program.TryArrayMatching(sampleTest3));
+                Console.WriteLine("Should be \"3-3-6-2\"");
 
                 Console.WriteLine("Good-bye World!");
             }
@@ -76,9 +86,12 @@ namespace academy_development_challenge
             List<int> intList1 = CreateIntList(strArr[0]);
             List<int> intList2 = CreateIntList(strArr[1]);
             int maxCount = GetMaxCount(intList1, intList2);
+
+            if (maxCount < 1) throw new ArgumentException("strArr must have at least one string with a number.");
+
             List<int> finalIntList = new List<int>();
 
-            for (int i = 0; i < maxCount - 1; i++)
+            for (int i = 0; i < maxCount; i++)
             {
                 int int1 = GetInt(intList1, i);
                 int int2 = GetInt(intList2, i);
@@ -94,7 +107,7 @@ namespace academy_development_challenge
         {
             var resultStringBuilder = new StringBuilder();
 
-            for (int i = 0; i < finalIntList.Count - 1; i++)
+            for (int i = 0; i < finalIntList.Count; i++)
             {
                 if (i == 0)
                 {
@@ -123,13 +136,15 @@ namespace academy_development_challenge
         public List<int> CreateIntList(string str)
         {
             string cleanStr = CleanString(str);
-            var stringArr = str.Split(',');
+            var stringArr = cleanStr.Split(',');
             var intList = new List<int>();
 
             foreach (string intStr in stringArr)
             {
-                int number = int.Parse(intStr);
-                intList.Add(number);
+                if (!string.IsNullOrEmpty(intStr)) {
+                    int number = int.Parse(intStr);
+                    intList.Add(number);
+                }
             }
 
             return intList;
@@ -137,7 +152,7 @@ namespace academy_development_challenge
 
         public string CleanString(string str)
         {
-            str = Regex.Replace(str, @"[^0-9,]/g", "");
+            str = Regex.Replace(str, @"[^0-9,]", "");
             return str;
         }
     }
